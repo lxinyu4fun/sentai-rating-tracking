@@ -1,0 +1,47 @@
+$font-color: #404244;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+mat-toolbar-row {
+  height: 44px;
+  color: $font-color;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 10px 0px 10px 10px;
+  box-shadow: 0 8px 8px -10px rgba(0,0,0,.15);
+  z-index: 2;
+}
+
+toku-header {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+}
+
+mat-sidebar-container {
+  z-index: 1;
+}
+
+.sidenav {
+  width: 250px;
+}
+
+.sidebar-container {
+  flex-grow: 1;
+  width: 250px;
+}
+
+.content {
+  background: white;
+  box-sizing: border-box;
+  padding: 20px;
+  z-index: 1;
+}

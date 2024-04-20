@@ -1,0 +1,14 @@
+<mat-toolbar-row>
+  <toku-header (toggleSidenav)="sidenav.toggle()"></toku-header>
+</mat-toolbar-row>
+
+<mat-sidenav-container class="sidebar-container">
+  <mat-sidenav #sidenav class="sidenav" mode="side" disableClose>
+    <sentai-sidebar/>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <router-outlet />
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<toku-chart></toku-chart>

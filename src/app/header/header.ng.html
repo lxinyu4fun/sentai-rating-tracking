@@ -1,0 +1,38 @@
+<div class="toolbar-info">
+  <button mat-icon-button class="menu" aria-label="menu" (click)="toggleSidenav.emit()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div class="menu-logo">
+    <a href="/">
+      <img alt="Sentai Logo" class="icon" src="../assets/sentai_logo_64.png" />
+      @if (language === Languages.ENG) {
+      <span class="wordmark" lang="en">
+        Tokusatsu Rating Tracker
+      </span>
+      } @else if (language === Languages.CHN) {
+      <span class="wordmark" lang="cn">
+        特摄评分跟踪
+      </span>
+      }
+    </a>
+  </div>
+</div>
+
+<div class="toku-search-bar">
+@if (language === Languages.ENG) {
+  <input type="text" placeholder="What tokusatsu show rating are you looking for?" #filter>
+} @else if (language === Languages.CHN) {
+  <input type="text" placeholder="你在寻找哪部特摄的评分呢？">
+}
+<button mat-icon-button class="search">
+  <mat-icon>search</mat-icon>
+</button>
+</div>
+
+<button mat-icon-button class="lang" (click)="toggleLanguage()">
+  @if (language === Languages.ENG) {
+  <div class="lang-en">EN</div>
+  } @else if (language === Languages.CHN) {
+  <div class="lang-cn">中</div>
+  }
+</button>
